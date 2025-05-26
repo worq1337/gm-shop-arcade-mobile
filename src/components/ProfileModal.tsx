@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { User, Mail, Phone, MessageCircle, Eye, EyeOff } from 'lucide-react';
+import { User, Mail, MessageCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -60,14 +60,6 @@ const ProfileModal = ({ isOpen, onClose }: ProfileModalProps) => {
             >
               <MessageCircle className="h-4 w-4 mr-2" />
               Войти через Telegram
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              className="w-full bg-gaming-charcoal border-gold-900/30 text-gold-200 hover:bg-gaming-charcoal/80 hover:text-gold-100"
-            >
-              <Phone className="h-4 w-4 mr-2" />
-              Войти по номеру телефона
             </Button>
           </div>
 
