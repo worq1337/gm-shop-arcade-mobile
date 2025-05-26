@@ -1,5 +1,5 @@
 
-import { ShoppingCart, Search, Menu, User } from 'lucide-react';
+import { ShoppingCart, Search, Menu, User, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -33,6 +33,9 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <Button variant="ghost" size="icon" className="text-gold-400 hover:text-gold-300 hover:bg-gold-900/20">
               <Search className="h-5 w-5 md:hidden" />
+            </Button>
+            <Button variant="ghost" size="icon" className="text-gold-400 hover:text-gold-300 hover:bg-gold-900/20">
+              <MessageCircle className="h-5 w-5" />
             </Button>
             <Button variant="ghost" size="icon" className="text-gold-400 hover:text-gold-300 hover:bg-gold-900/20">
               <User className="h-5 w-5" />
