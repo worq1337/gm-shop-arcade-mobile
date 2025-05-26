@@ -1,13 +1,22 @@
-
 import { ShoppingCart, Search, Menu, User, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
+import ProfileModal from './ProfileModal';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const openProfileModal = () => {
+    setIsProfileModalOpen(true);
+  };
+
+  const closeProfileModal = () => {
+    setIsProfileModalOpen(false);
   };
 
   return (
@@ -47,7 +56,12 @@ const Header = () => {
               <Button variant="ghost" size="icon" className="text-gold-400 hover:text-gold-300 hover:bg-gold-900/20">
                 <Search className="h-5 w-5 md:hidden" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-gold-400 hover:text-gold-300 hover:bg-gold-900/20">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="text-gold-400 hover:text-gold-300 hover:bg-gold-900/20"
+                onClick={openProfileModal}
+              >
                 <User className="h-5 w-5" />
               </Button>
               <Button variant="ghost" size="icon" className="relative text-gold-400 hover:text-gold-300 hover:bg-gold-900/20">
@@ -61,12 +75,10 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-black/50 lg:hidden" onClick={toggleMobileMenu} />
       )}
 
-      {/* Mobile Menu */}
       <div className={`fixed top-0 left-0 z-50 h-full w-64 bg-gaming-dark border-r border-gold-900/20 transform transition-transform duration-300 ease-in-out lg:hidden ${
         isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
@@ -113,6 +125,8 @@ const Header = () => {
           </nav>
         </div>
       </div>
+
+      <ProfileModal isOpen={isProfileModalOpen} onClose={closeProfileModal} />
     </>
   );
 };
