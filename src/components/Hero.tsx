@@ -1,4 +1,3 @@
-
 import { Star, Shield, Zap, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -16,7 +15,7 @@ const Hero = () => {
           </div>
           
           <div className="relative mb-6 animate-slide-up">
-            {/* Анимированный задний фон для SHOP */}
+            {/* Анимированный задний фон для GM SHOP */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-full h-32 bg-gradient-to-r from-transparent via-gold-500/20 to-transparent rounded-3xl blur-xl animate-glow"></div>
               <div className="absolute w-3/4 h-24 bg-gradient-to-r from-gold-400/10 via-gold-500/30 to-gold-400/10 rounded-2xl animate-pulse"></div>
@@ -25,7 +24,7 @@ const Hero = () => {
             
             {/* Основной текст */}
             <h1 className="relative text-6xl md:text-8xl lg:text-9xl font-bold">
-              <span className="gold-gradient glow-text">SHOP</span>
+              <span className="gold-gradient glow-text">GM SHOP</span>
             </h1>
           </div>
           
