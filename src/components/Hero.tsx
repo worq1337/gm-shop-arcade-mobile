@@ -1,4 +1,5 @@
-import { Star, Shield, Zap, MessageCircle } from 'lucide-react';
+
+import { Star, Shield, Zap, MessageCircle, Percent } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -42,8 +43,8 @@ const Hero = () => {
               size="lg" 
               className="border-gold-500/50 text-gold-300 hover:bg-gold-500/10 px-8 py-3 rounded-lg hover-lift flex items-center space-x-2"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Поддержка 24/7</span>
+              <Percent className="w-4 h-4" />
+              <span>Акции</span>
             </Button>
           </div>
           
