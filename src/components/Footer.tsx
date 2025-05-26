@@ -1,10 +1,37 @@
-
-import { Heart, Mail, Phone, MessageCircle } from 'lucide-react';
+import { Heart, Mail, Phone, MessageCircle, Star } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gaming-dark border-t border-gold-900/20 py-12">
-      <div className="container mx-auto px-4">
+    <footer className="relative bg-gaming-dark border-t border-gold-900/20 py-12 overflow-hidden">
+      {/* Анимированные фигуры на фоне */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Круги */}
+        <div className="absolute top-8 left-12 w-18 h-18 rounded-full bg-gradient-to-br from-gold-500/12 to-gold-600/6 animate-float"></div>
+        <div className="absolute top-20 right-20 w-12 h-12 rounded-full bg-gradient-to-br from-gold-400/10 to-gold-500/5 animate-pulse-gold"></div>
+        <div className="absolute bottom-16 left-1/3 w-24 h-24 rounded-full bg-gradient-to-br from-gold-600/8 to-gold-700/4 animate-glow"></div>
+        
+        {/* Треугольники */}
+        <div className="absolute top-32 right-32 w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-b-[24px] border-b-gold-500/14 animate-float" style={{animationDelay: '1.8s'}}></div>
+        <div className="absolute bottom-24 right-1/4 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[17px] border-b-gold-400/11 animate-pulse-gold" style={{animationDelay: '3.1s'}}></div>
+        
+        {/* Квадраты и ромбы */}
+        <div className="absolute top-16 left-1/4 w-9 h-9 bg-gradient-to-br from-gold-500/11 to-gold-600/5 rotate-45 animate-float" style={{animationDelay: '1.4s'}}></div>
+        <div className="absolute bottom-32 left-16 w-6 h-6 bg-gradient-to-br from-gold-400/14 to-gold-500/7 rotate-12 animate-glow" style={{animationDelay: '2.5s'}}></div>
+        
+        {/* Линии */}
+        <div className="absolute top-1/4 left-32 w-16 h-0.5 bg-gradient-to-r from-transparent via-gold-500/22 to-transparent animate-glow" style={{animationDelay: '3.4s'}}></div>
+        <div className="absolute bottom-1/4 right-28 w-13 h-0.5 bg-gradient-to-r from-transparent via-gold-400/18 to-transparent animate-pulse-gold" style={{animationDelay: '2.8s'}}></div>
+        
+        {/* Звезды */}
+        <div className="absolute top-12 right-1/2">
+          <Star className="w-5 h-5 text-gold-500/13 animate-pulse-gold" style={{animationDelay: '4.8s'}} />
+        </div>
+        <div className="absolute bottom-12 left-2/3">
+          <Star className="w-4 h-4 text-gold-400/10 animate-float" style={{animationDelay: '4.4s'}} />
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">

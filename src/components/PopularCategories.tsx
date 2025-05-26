@@ -1,4 +1,3 @@
-
 import { Card } from '@/components/ui/card';
 import { Crown, Coins, Diamond, Sword, Shield, Star } from 'lucide-react';
 
@@ -55,8 +54,37 @@ const categories = [
 
 const PopularCategories = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-gaming-dark to-gaming-charcoal">
-      <div className="container mx-auto px-4">
+    <section className="relative py-16 bg-gradient-to-b from-gaming-dark to-gaming-charcoal overflow-hidden">
+      {/* Анимированные фигуры на фоне */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Круги */}
+        <div className="absolute top-10 left-16 w-20 h-20 rounded-full bg-gradient-to-br from-gold-500/15 to-gold-600/8 animate-float"></div>
+        <div className="absolute top-32 right-10 w-14 h-14 rounded-full bg-gradient-to-br from-gold-400/12 to-gold-500/6 animate-pulse-gold"></div>
+        <div className="absolute bottom-20 left-1/3 w-28 h-28 rounded-full bg-gradient-to-br from-gold-600/10 to-gold-700/5 animate-glow"></div>
+        
+        {/* Треугольники */}
+        <div className="absolute top-40 right-20 w-0 h-0 border-l-[18px] border-l-transparent border-r-[18px] border-r-transparent border-b-[31px] border-b-gold-500/18 animate-float" style={{animationDelay: '1.2s'}}></div>
+        <div className="absolute bottom-32 right-1/4 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[21px] border-b-gold-400/12 animate-pulse-gold" style={{animationDelay: '2.3s'}}></div>
+        
+        {/* Квадраты и ромбы */}
+        <div className="absolute top-24 left-1/4 w-10 h-10 bg-gradient-to-br from-gold-500/12 to-gold-600/6 rotate-45 animate-float" style={{animationDelay: '0.8s'}}></div>
+        <div className="absolute bottom-40 left-12 w-7 h-7 bg-gradient-to-br from-gold-400/15 to-gold-500/8 rotate-12 animate-glow" style={{animationDelay: '1.8s'}}></div>
+        <div className="absolute top-2/3 right-1/3 w-9 h-9 bg-gradient-to-br from-gold-600/12 to-gold-700/6 rotate-45 animate-pulse-gold" style={{animationDelay: '3.2s'}}></div>
+        
+        {/* Линии */}
+        <div className="absolute top-1/4 left-24 w-18 h-0.5 bg-gradient-to-r from-transparent via-gold-500/25 to-transparent animate-glow" style={{animationDelay: '2.8s'}}></div>
+        <div className="absolute bottom-1/4 right-20 w-14 h-0.5 bg-gradient-to-r from-transparent via-gold-400/20 to-transparent animate-pulse-gold" style={{animationDelay: '2.1s'}}></div>
+        
+        {/* Звезды */}
+        <div className="absolute top-16 right-1/2">
+          <Star className="w-5 h-5 text-gold-500/15 animate-pulse-gold" style={{animationDelay: '4.2s'}} />
+        </div>
+        <div className="absolute bottom-16 left-2/3">
+          <Star className="w-4 h-4 text-gold-400/12 animate-float" style={{animationDelay: '3.8s'}} />
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="gold-gradient">Популярные игры</span>
