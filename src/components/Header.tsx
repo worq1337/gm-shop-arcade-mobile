@@ -1,4 +1,3 @@
-
 import { ShoppingCart, Search, Menu, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -15,7 +14,13 @@ const Header = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-gold-500 to-gold-600 rounded-lg flex items-center justify-center animate-float">
                 <span className="text-gaming-dark font-bold text-lg">G</span>
               </div>
-              <h1 className="text-2xl font-bold gold-gradient">GM Shop</h1>
+              <div className="relative">
+                {/* Анимированный фон */}
+                <div className="absolute inset-0 bg-gradient-to-r from-gold-500/20 via-gold-400/30 to-gold-600/20 rounded-lg blur-sm animate-glow"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-500/10 to-transparent rounded-lg animate-pulse"></div>
+                {/* Основной текст */}
+                <h1 className="relative text-2xl font-bold gold-gradient px-3 py-1 rounded-lg">GM Shop</h1>
+              </div>
             </div>
           </div>
 
