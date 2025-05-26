@@ -1,3 +1,4 @@
+
 import { Star, Shield, Zap, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -14,15 +15,13 @@ const Hero = () => {
             <span className="text-gold-300 text-sm font-medium">Премиальный магазин игровых товаров</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up">
-            <span className="gold-gradient glow-text">GM Shop</span>
-            <br />
-            <span className="text-gold-100">Игровые товары</span>
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 animate-slide-up">
+            <span className="gold-gradient glow-text">SHOP</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gold-200/80 mb-8 max-w-2xl mx-auto animate-fade-in">
-            Покупайте игровую валюту, предметы и улучшения для ваших любимых мобильных игр. 
-            Безопасно, быстро и надежно.
+            Начать покупки популярные игры. Покупайте игровую валюту, предметы и улучшения 
+            для ваших любимых мобильных игр. Безопасно, быстро и надежно.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-slide-up">
@@ -59,6 +58,16 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Чат поддержки - кружочек в правом нижнем углу */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button 
+          size="icon"
+          className="w-14 h-14 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-gaming-dark shadow-lg hover-lift animate-float"
+        >
+          <MessageCircle className="w-6 h-6" />
+        </Button>
       </div>
     </section>
   );
