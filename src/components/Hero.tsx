@@ -1,4 +1,3 @@
-
 import { Star, Shield, Zap, MessageCircle, Percent } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -36,15 +35,13 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-slide-up">
             <Button size="lg" className="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-gaming-dark font-bold px-8 py-3 rounded-lg hover-lift">
-              Начать покупки
+              Каталог
             </Button>
             <Button 
-              variant="outline" 
               size="lg" 
-              className="border-gold-500/50 text-gold-300 hover:bg-gold-500/10 px-8 py-3 rounded-lg hover-lift flex items-center space-x-2"
+              className="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-gaming-dark font-bold px-8 py-3 rounded-lg hover-lift"
             >
-              <Percent className="w-4 h-4" />
-              <span>Акции</span>
+              Акции
             </Button>
           </div>
           
