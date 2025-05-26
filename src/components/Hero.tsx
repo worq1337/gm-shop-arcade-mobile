@@ -10,6 +10,14 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
+          <div className="mb-6 animate-fade-in">
+            <img 
+              src="/lovable-uploads/509501b9-0d01-4a7f-b1ba-d554dc93c411.png" 
+              alt="GM Shop Logo" 
+              className="mx-auto w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mb-4"
+            />
+          </div>
+          
           <div className="inline-flex items-center space-x-2 bg-gaming-charcoal/50 border border-gold-900/30 rounded-full px-4 py-2 mb-6 animate-fade-in">
             <Star className="w-4 h-4 text-gold-500" />
             <span className="text-gold-300 text-sm font-medium">Премиальный магазин игровых товаров</span>
