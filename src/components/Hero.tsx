@@ -1,4 +1,3 @@
-
 import { Star, Shield, Zap, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -10,11 +9,11 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-6 animate-fade-in">
+          <div className="mb-4">
             <img 
               src="/lovable-uploads/509501b9-0d01-4a7f-b1ba-d554dc93c411.png" 
               alt="GM Shop Logo" 
-              className="mx-auto w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mb-4"
+              className="mx-auto w-16 h-16 opacity-50 mb-2"
             />
           </div>
           
