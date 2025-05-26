@@ -29,8 +29,8 @@ const Hero = () => {
           </div>
           
           <p className="text-lg md:text-xl text-gold-200/80 mb-8 max-w-2xl mx-auto animate-fade-in">
-            Начать покупки популярные игры. Покупайте игровую валюту, предметы и улучшения 
-            для ваших любимых мобильных игр. Безопасно, быстро и надежно.
+            Начать покупки в популярных играх. Покупайте игровую валюту, буст и улучшения 
+            для ваших любимых мобильных играх. Безопасно, быстро и надежно.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-slide-up">
