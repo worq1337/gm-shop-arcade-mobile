@@ -1,74 +1,62 @@
 
+import { Star, Shield, Zap, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Gamepad2, Zap, Crown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-      {/* Background gradient */}
+    <section className="relative py-20 lg:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-gaming-dark via-gaming-charcoal to-gaming-dark"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgo8cGF0aCBkPSJNIDYwIDAgTCAwIDAgMCA2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjE1LCAwLCAwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwvcGF0dGVybj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIiAvPgo8L3N2Zz4=')] opacity-20"></div>
       
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gold-500/10 rounded-full animate-float" style={{ animationDelay: '0s' }}></div>
-        <div className="absolute top-40 right-20 w-16 h-16 bg-gold-400/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-gold-600/10 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-40 right-1/3 w-14 h-14 bg-gold-500/10 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <div className="flex justify-center mb-6">
-            <div className="relative">
-              <Crown className="h-16 w-16 text-gold-500 animate-glow" />
-              <div className="absolute inset-0 animate-pulse-gold">
-                <Crown className="h-16 w-16 text-gold-400/50" />
-              </div>
-            </div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center max-w-4xl mx-auto">
+          <div className="inline-flex items-center space-x-2 bg-gaming-charcoal/50 border border-gold-900/30 rounded-full px-4 py-2 mb-6 animate-fade-in">
+            <Star className="w-4 h-4 text-gold-500" />
+            <span className="text-gold-300 text-sm font-medium">Премиальный магазин игровых товаров</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up">
             <span className="gold-gradient glow-text">GM Shop</span>
             <br />
-            <span className="text-gold-100 text-3xl md:text-4xl font-normal">
-              Магазин игровых товаров
-            </span>
+            <span className="text-gold-100">Игровые товары</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gold-200/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Премиальные игровые товары для мобильных игр. Золото, кристаллы, аккаунты и многое другое.
+          <p className="text-lg md:text-xl text-gold-200/80 mb-8 max-w-2xl mx-auto animate-fade-in">
+            Покупайте игровую валюту, предметы и улучшения для ваших любимых мобильных игр. 
+            Безопасно, быстро и надежно.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-gaming-dark font-bold px-8 py-4 text-lg shadow-2xl hover-lift animate-glow"
-            >
-              <Gamepad2 className="mr-2 h-5 w-5" />
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-slide-up">
+            <Button size="lg" className="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-gaming-dark font-bold px-8 py-3 rounded-lg hover-lift">
               Начать покупки
             </Button>
             <Button 
               variant="outline" 
-              size="lg"
-              className="border-gold-500/50 text-gold-300 hover:bg-gold-500/10 px-8 py-4 text-lg hover-lift"
+              size="lg" 
+              className="border-gold-500/50 text-gold-300 hover:bg-gold-500/10 px-8 py-3 rounded-lg hover-lift flex items-center space-x-2"
             >
-              <Zap className="mr-2 h-5 w-5" />
-              Популярные игры
+              <MessageCircle className="w-4 h-4" />
+              <span>Поддержка 24/7</span>
             </Button>
           </div>
-
-          <div className="flex flex-wrap justify-center gap-8 text-sm text-gold-300/80">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-gold-500 rounded-full animate-pulse-gold"></div>
-              <span>Мгновенная доставка</span>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <div className="gaming-card p-6 rounded-xl hover-lift animate-fade-in">
+              <Shield className="w-8 h-8 text-gold-500 mx-auto mb-3" />
+              <h3 className="font-bold text-gold-300 mb-2">Безопасность</h3>
+              <p className="text-gold-200/70 text-sm">Гарантия безопасности всех транзакций</p>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-gold-500 rounded-full animate-pulse-gold"></div>
-              <span>Безопасные платежи</span>
+            
+            <div className="gaming-card p-6 rounded-xl hover-lift animate-fade-in">
+              <Zap className="w-8 h-8 text-gold-500 mx-auto mb-3" />
+              <h3 className="font-bold text-gold-300 mb-2">Быстрая доставка</h3>
+              <p className="text-gold-200/70 text-sm">Получите товары в течение минут</p>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-gold-500 rounded-full animate-pulse-gold"></div>
-              <span>24/7 поддержка</span>
+            
+            <div className="gaming-card p-6 rounded-xl hover-lift animate-fade-in">
+              <Star className="w-8 h-8 text-gold-500 mx-auto mb-3" />
+              <h3 className="font-bold text-gold-300 mb-2">Качество</h3>
+              <p className="text-gold-200/70 text-sm">Только оригинальные игровые товары</p>
             </div>
           </div>
         </div>
