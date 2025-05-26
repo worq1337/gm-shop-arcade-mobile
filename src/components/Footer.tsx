@@ -17,14 +17,14 @@ const Footer = () => {
             <p className="text-gold-200/70 mb-6 max-w-md">
               Премиальный магазин игровых товаров для мобильных игр. Быстро, безопасно, надежно.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-col space-y-2">
               <div className="flex items-center space-x-2 text-gold-300/80">
                 <Phone className="w-4 h-4" />
-                <span className="text-sm">+7 (999) 123-45-67</span>
+                <span className="text-sm">+7 (918) 087-04-10</span>
               </div>
               <div className="flex items-center space-x-2 text-gold-300/80">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">support@gmshop.com</span>
+                <span className="text-sm">help@gmshop.pw</span>
               </div>
             </div>
           </div>
@@ -52,8 +52,8 @@ const Footer = () => {
                 <span className="text-gold-200/70 text-sm">Онлайн чат 24/7</span>
               </li>
               <li>
-                <a href="#" className="text-gold-200/70 hover:text-gold-300 transition-colors text-sm">
-                  Telegram: @gmshop_support
+                <a href="https://t.me/gmshopsupport" className="text-gold-200/70 hover:text-gold-300 transition-colors text-sm">
+                  Telegram: @gmshopsupport
                 </a>
               </li>
               <li>
