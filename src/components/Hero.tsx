@@ -15,9 +15,19 @@ const Hero = () => {
             <span className="text-gold-300 text-sm font-medium">Премиальный магазин игровых товаров</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 animate-slide-up">
-            <span className="gold-gradient glow-text">SHOP</span>
-          </h1>
+          <div className="relative mb-6 animate-slide-up">
+            {/* Анимированный задний фон для SHOP */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-full h-32 bg-gradient-to-r from-transparent via-gold-500/20 to-transparent rounded-3xl blur-xl animate-glow"></div>
+              <div className="absolute w-3/4 h-24 bg-gradient-to-r from-gold-400/10 via-gold-500/30 to-gold-400/10 rounded-2xl animate-pulse"></div>
+              <div className="absolute w-1/2 h-16 bg-gradient-to-r from-transparent via-gold-600/40 to-transparent rounded-xl blur-md animate-float"></div>
+            </div>
+            
+            {/* Основной текст */}
+            <h1 className="relative text-6xl md:text-8xl lg:text-9xl font-bold">
+              <span className="gold-gradient glow-text">SHOP</span>
+            </h1>
+          </div>
           
           <p className="text-lg md:text-xl text-gold-200/80 mb-8 max-w-2xl mx-auto animate-fade-in">
             Начать покупки популярные игры. Покупайте игровую валюту, предметы и улучшения 
